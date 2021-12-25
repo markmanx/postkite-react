@@ -1,12 +1,11 @@
 {
   "name": "@postkite/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/markmanx/postkite-react",
   "description": "Integrate PostKite into your React app",
   "private": false,
   "main": "dist/main.bundle.js",
   "scripts": {
-    "prepare": "yarn run build",
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch"
   },
@@ -16,7 +15,7 @@
     "react": ">= 16.8.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.38",
+    "@types/react": "^16.8.0",
     "esbuild-loader": "^2.16.0",
     "prettier": "^2.5.1",
     "react": "^16.8.0",
