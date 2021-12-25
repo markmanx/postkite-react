@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "repository": "https://github.com/markmanx/postkite-react",
   "description": "Integrate PostKite into your React app",
-  "public": true,
+  "private": false,
   "main": "dist/main.bundle.js",
   "scripts": {
     "prepare": "yarn run build",
