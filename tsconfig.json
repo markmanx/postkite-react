@@ -16,7 +16,6 @@
     "strictNullChecks": true,
     "lib": ["es6", "dom"]
   },
-  "files": ["src"],
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

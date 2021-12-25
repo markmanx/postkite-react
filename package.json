@@ -1,7 +1,8 @@
 {
   "name": "@postkite/react",
   "version": "0.0.1",
-  "description": "",
+  "description": "Integrate PostKite into your React app",
+  "public": true,
   "main": "dist/main.bundle.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
