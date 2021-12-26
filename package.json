@@ -1,6 +1,6 @@
 {
   "name": "@postkite/react",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "repository": "https://github.com/markmanx/postkite-react",
   "description": "Integrate PostKite into your React app",
   "private": false,
