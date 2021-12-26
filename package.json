@@ -4,8 +4,9 @@
   "repository": "https://github.com/markmanx/postkite-react",
   "description": "Integrate PostKite into your React app",
   "private": false,
-  "main": "dist/main.bundle.js",
+  "main": "dist/postkite.js",
   "scripts": {
+    "prepare": "yarn run build",
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch"
   },
