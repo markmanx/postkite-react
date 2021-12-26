@@ -25,7 +25,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'postkite.js',
     library: {
-      type: 'commonjs2',
+      type: 'umd',
     },
   },
   module: {
