@@ -10,6 +10,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'postkite.js',
+    library: {
+      type: 'commonjs2',
+    },
   },
   module: {
     rules: [
