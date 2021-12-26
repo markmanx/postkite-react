@@ -7,8 +7,8 @@
   "main": "dist/postkite.js",
   "scripts": {
     "prepare": "yarn run build",
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch"
+    "build": "webpack --config webpack.config.js && tsc --emitDeclarationOnly",
+    "watch": "yarn run build -- --watch"
   },
   "author": "",
   "license": "ISC",

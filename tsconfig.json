@@ -7,14 +7,15 @@
     "target": "es5",
     "allowJs": true,
     "removeComments": true,
-    "sourceMap": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "isolatedModules": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "lib": ["es6", "dom"]
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "declaration": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
