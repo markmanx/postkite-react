@@ -6,6 +6,9 @@ export const usePostKite = () => {
   useEffect(() => {
     if (window.PostKite) {
       setPostKite(window.PostKite)
+      window.PostKite.setChangeListener((postKite) => {
+        setPostKite(postKite)
+      })
       return
     }
 
