@@ -2,10 +2,11 @@ import { useEffect, useState, useCallback } from 'react'
 
 export const usePostKite = () => {
   const [postKite, setPostKite] = useState<Window['PostKite']>()
+  const [notificationsCount, setNotificationsCount] = useState(0)
 
   const setListener = useCallback(() => {
     window.PostKite.setChangeListener((postKite) => {
-      setPostKite(postKite)
+      setNotificationsCount(postKite.notificationsCount)
     })
   }, [])
 
@@ -29,5 +30,8 @@ export const usePostKite = () => {
     document.body.appendChild(script)
   }, [])
 
-  return postKite
+  return {
+    postKite,
+    notificationsCount,
+  }
 }

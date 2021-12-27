@@ -2,7 +2,7 @@ import React from 'react'
 import { usePostKite } from './usePostKite'
 
 export const PostKite: React.FC = ({ children }) => {
-  const postKite = usePostKite()
+  const { postKite, notificationsCount } = usePostKite()
 
   return (
     <div
@@ -12,7 +12,7 @@ export const PostKite: React.FC = ({ children }) => {
       onClick={() => postKite?.openModal()}
     >
       {children}
-      {postKite && postKite.notificationsCount > 0 && (
+      {notificationsCount > 0 && (
         <div
           style={{
             position: 'absolute',
