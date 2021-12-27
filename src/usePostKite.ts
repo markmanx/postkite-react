@@ -1,14 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 export const usePostKite = () => {
   const [postKite, setPostKite] = useState<Window['PostKite']>()
 
+  const setListener = useCallback(() => {
+    window.PostKite.setChangeListener((postKite) => {
+      setPostKite(postKite)
+    })
+  }, [])
+
   useEffect(() => {
     if (window.PostKite) {
       setPostKite(window.PostKite)
-      window.PostKite.setChangeListener((postKite) => {
-        setPostKite(postKite)
-      })
+      setListener()
       return
     }
 
@@ -19,6 +23,7 @@ export const usePostKite = () => {
     script.addEventListener('error', onError)
     script.onload = () => {
       setPostKite(window.PostKite)
+      setListener()
     }
 
     document.body.appendChild(script)
